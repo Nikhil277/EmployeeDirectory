@@ -21,6 +21,4 @@ class EmployeeDetailViewController: UIViewController {
         imageViewProfile.sd_setImage(with: URL(string: employeeDetails?.imageUrl ?? ""), placeholderImage: nil, options: .refreshCached, context: nil)
         labelEmilAddress.text = employeeDetails?.emailAddress
     }
-    
-
 }

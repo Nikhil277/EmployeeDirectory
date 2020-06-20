@@ -32,10 +32,6 @@ class EmployeeListViewController: UIViewController {
         searchController.searchBar.placeholder = "Search Employees"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super .viewWillAppear(animated)
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -55,6 +51,12 @@ class EmployeeListViewController: UIViewController {
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
     
